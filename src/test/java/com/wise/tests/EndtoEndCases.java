@@ -1,5 +1,7 @@
 package com.wise.tests;
 
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import java.time.LocalDate;
 
 import org.testng.annotations.Test;
@@ -8,13 +10,14 @@ import com.wise.BaseClass;
 
 public class EndtoEndCases extends BaseClass {
 
+	@Parameters({"mobileNum","OTP"})
 	@Test(description = "Perform login as a tutor")
-	public void performLogin() throws Exception {
+	public void performLogin(String mobileNum,String OTP) throws Exception {
 		onboardingPage.clickOnLoginLink();
 		onboardingPage.clickOnLoginWithMobileButton();
-		onboardingPage.enterMobileNo("1111100000");
+		onboardingPage.enterMobileNo(mobileNum);
 		onboardingPage.clickOnGetOTPButton();
-		onboardingPage.enterOTP("0000");
+		onboardingPage.enterOTP(OTP);
 		onboardingPage.clickOnVerifyNowButton();
 		getStatedPage.verifyInstituteTitle("Testing Institute");
 	}

@@ -1,37 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-31T18:49:03 IST" name="Default suite" finished-at="2025-01-31T18:49:36 IST" duration-ms="33108">
+  <suite started-at="2025-02-01T15:29:52 IST" name="Suite" finished-at="2025-02-01T15:30:43 IST" duration-ms="51177">
     <groups>
     </groups>
-    <test started-at="2025-01-31T18:49:03 IST" name="Default test" finished-at="2025-01-31T18:49:36 IST" duration-ms="33108">
+    <test started-at="2025-02-01T15:29:52 IST" name="Test" finished-at="2025-02-01T15:30:43 IST" duration-ms="51177">
       <class name="com.wise.tests.EndtoEndCases">
-        <test-method is-config="true" signature="lunchBrowser()[pri:0, instance:com.wise.tests.EndtoEndCases@243c4f91]" started-at="2025-01-31T18:49:03 IST" name="lunchBrowser" finished-at="2025-01-31T18:49:06 IST" duration-ms="3691" status="PASS">
+        <test-method is-config="true" signature="lunchBrowser(java.lang.String,java.lang.String)[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:29:52 IST" name="lunchBrowser" finished-at="2025-02-01T15:30:03 IST" duration-ms="11129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://staging-web.wise.live/signup]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchBrowser -->
-        <test-method signature="performLogin()[pri:0, instance:com.wise.tests.EndtoEndCases@243c4f91]" started-at="2025-01-31T18:49:06 IST" name="performLogin" description="Perform login as a tutor" finished-at="2025-01-31T18:49:11 IST" duration-ms="4358" status="PASS">
+        <test-method signature="performLogin(java.lang.String,java.lang.String)[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:30:03 IST" name="performLogin" description="Perform login as a tutor" finished-at="2025-02-01T15:30:11 IST" duration-ms="7454" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1111100000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0000]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method signature="classRoom()[pri:0, instance:com.wise.tests.EndtoEndCases@243c4f91]" started-at="2025-01-31T18:49:11 IST" name="classRoom" description="Go to the classroom" finished-at="2025-01-31T18:49:12 IST" depends-on-methods="com.wise.tests.EndtoEndCases.performLogin" duration-ms="1227" status="PASS">
+        <test-method signature="classRoom()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:30:11 IST" name="classRoom" description="Go to the classroom" finished-at="2025-02-01T15:30:16 IST" depends-on-methods="com.wise.tests.EndtoEndCases.performLogin" duration-ms="4766" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classRoom -->
-        <test-method signature="scheduleSession()[pri:0, instance:com.wise.tests.EndtoEndCases@243c4f91]" started-at="2025-01-31T18:49:12 IST" name="scheduleSession" description="Schedule a session" finished-at="2025-01-31T18:49:35 IST" depends-on-methods="com.wise.tests.EndtoEndCases.classRoom" duration-ms="22927" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scheduleSession -->
-        <test-method signature="assertSession()[pri:0, instance:com.wise.tests.EndtoEndCases@243c4f91]" started-at="2025-01-31T18:49:35 IST" name="assertSession" description="Assert the session" finished-at="2025-01-31T18:49:36 IST" depends-on-methods="com.wise.tests.EndtoEndCases.scheduleSession" duration-ms="859" status="FAIL">
-          <exception class="java.lang.Exception">
+        <test-method signature="scheduleSession()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:30:16 IST" name="scheduleSession" description="Schedule a session" finished-at="2025-02-01T15:30:43 IST" depends-on-methods="com.wise.tests.EndtoEndCases.classRoom" duration-ms="27682" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[host Name expected [[[ChromeDriver: chrome on linux (88c9d3374f35469953718eb508df9f19)] -> css selector: .session .text-uppercase]] but found [HOSTED BY WISE TESTER]]]>
+              <![CDATA[element click intercepted: Element <div class="v-select__slot">...</div> is not clickable at point (456, 483). Other element would receive the click: <div class="custom-alert-overlay"></div>
+  (Session info: chrome=130.0.6723.69)
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-52-generic', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3da94d0b008e29da7779c3fb6074502b, clickElement {id=f.D9EEC573C39A1CED64BF57FF75D2A332.d.0B98978E2B12012F27C52D7827EE495D.e.156}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.69, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41119/devtoo..., se:cdpVersion: 130.0.6723.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (3da94d0b008e29da7779c3fb6074502b)] -> css selector: .timing-card .v-select__slot]
+Session ID: 3da94d0b008e29da7779c3fb6074502b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Exception: host Name expected [[[ChromeDriver: chrome on linux (88c9d3374f35469953718eb508df9f19)] -> css selector: .session .text-uppercase]] but found [HOSTED BY WISE TESTER]
-at com.wise.pagefactory.GroupCoursesPage.verifyTheHostName(GroupCoursesPage.java:158)
-at com.wise.tests.EndtoEndCases.assertSession(EndtoEndCases.java:44)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="v-select__slot">...</div> is not clickable at point (456, 483). Other element would receive the click: <div class="custom-alert-overlay"></div>
+  (Session info: chrome=130.0.6723.69)
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-52-generic', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3da94d0b008e29da7779c3fb6074502b, clickElement {id=f.D9EEC573C39A1CED64BF57FF75D2A332.d.0B98978E2B12012F27C52D7827EE495D.e.156}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.69, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41119/devtoo..., se:cdpVersion: 130.0.6723.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (3da94d0b008e29da7779c3fb6074502b)] -> css selector: .timing-card .v-select__slot]
+Session ID: 3da94d0b008e29da7779c3fb6074502b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+at com.wise.pagefactory.GroupCoursesPage.selectTime(GroupCoursesPage.java:112)
+at com.wise.tests.EndtoEndCases.scheduleSession(EndtoEndCases.java:38)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -60,11 +112,47 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Exception -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scheduleSession -->
+        <test-method signature="assertSession()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:30:43 IST" name="assertSession" description="Assert the session" finished-at="2025-02-01T15:30:43 IST" depends-on-methods="com.wise.tests.EndtoEndCases.scheduleSession" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndtoEndCases.assertSession()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndtoEndCases.assertSession()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- assertSession -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.wise.tests.EndtoEndCases@5119fb47]" started-at="2025-02-01T15:30:43 IST" name="closeBrowser" finished-at="2025-02-01T15:30:43 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.wise.tests.EndtoEndCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

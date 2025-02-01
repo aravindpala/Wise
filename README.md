@@ -34,5 +34,14 @@ Project Structure
    All Page Elements and Methods Under src/main/java/com.wise.pagefactory package
    Base Class under src/main/java/com.wise package
    Test cases are under src/test/java/com.wise.testcases package 
-  
-  
+ ----------------------------------------------------------------------
+ Test Reports 
+ 	open the Folder test-output
+ 	open the emailable-report.html file in web browser to see reports
+  			or
+  	open test-output -> Suite -> Test.html
+ ----------------------------------------------------------------------
+ you can change the browser and url and mobile number and otp from testcases.xml file
+ 		
+in parameter's tag you can change value as per value it will execute
+   browser will accept firefox and chrome   

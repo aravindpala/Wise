@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,11 +43,13 @@ public class OnboardingPage {
 		loginLink.click();
 	}
 
-	public void clickOnLoginWithMobileButton() {
+	public void clickOnLoginWithMobileButton() throws InterruptedException {
+		Thread.sleep(2000);
+		Actions ac = new Actions(driver);
 		try {
-			mobileBtn.click();
+			ac.doubleClick(mobileBtn).perform();
 		} catch (StaleElementReferenceException e) {
-			mobileBtn.click();
+			ac.doubleClick(mobileBtn).perform();
 		}
 	}
 

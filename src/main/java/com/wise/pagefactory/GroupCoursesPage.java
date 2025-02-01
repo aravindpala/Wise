@@ -93,7 +93,8 @@ public class GroupCoursesPage {
 		livesessionsBtn.click();
 	}
 
-	public void clickOnSheduleSessionsButton() {
+	public void clickOnSheduleSessionsButton() throws InterruptedException {
+		Thread.sleep(2000);
 		try {
 			scheduleSessionsBtn.click();
 		} catch (NoSuchElementException e) {
@@ -106,7 +107,8 @@ public class GroupCoursesPage {
 		addSessionBtn.click();
 	}
 
-	public void selectTime(String time) {
+	public void selectTime(String time) throws InterruptedException {
+		Thread.sleep(2000);
 		timeField.click();
 		try {
 			timeField.findElement(By.tagName("input")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
@@ -123,7 +125,8 @@ public class GroupCoursesPage {
 		}
 	}
 
-	public void clickOnCreateButton() {
+	public void clickOnCreateButton() throws InterruptedException {
+		Thread.sleep(2000);
 		createBtn.click();
 	}
 
